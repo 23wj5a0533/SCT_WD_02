@@ -1,0 +1,98 @@
+/* Custom styles to ensure Inter font and smooth transitions */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #E6E6FA; /* Lavender background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.calculator-container {
+    background-color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 20px; /* Rounded corners for the main container */
+    padding: 25px;
+    max-width: 360px; /* Fixed width for a calculator */
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.calculator-display {
+    background-color: #1f2937; /* Dark background for display */
+    color: #ffffff;
+    font-size: 2.5rem; /* Larger font for display */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for display */
+    text-align: right;
+    margin-bottom: 15px;
+    overflow-x: auto; /* Allow horizontal scrolling for long numbers */
+    white-space: nowrap; /* Prevent wrapping */
+}
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 12px; /* Space between buttons */
+}
+.calculator-button {
+    padding: 20px;
+    border-radius: 15px; /* Rounded buttons */
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+.calculator-button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Number button styles */
+.number-button {
+    background-color: #e5e7eb; /* Light gray */
+    color: #374151; /* Dark gray text */
+}
+.number-button:hover {
+    background-color: #d1d5db;
+}
+
+/* Operator button styles */
+.operator-button {
+    background-color: #3b82f6; /* Blue */
+    color: white;
+}
+.operator-button:hover {
+    background-color: #2563eb;
+}
+
+/* Clear button style */
+.clear-button {
+    background-color: #ef4444; /* Red */
+    color: white;
+}
+.clear-button:hover {
+    background-color: #dc2626;
+}
+
+/* Equals button style */
+.equals-button {
+    background-color: #10b981; /* Green */
+    color: white;
+    grid-column: span 2; /* Make equals button span two columns */
+}
+.equals-button:hover {
+    background-color: #059669;
+}
